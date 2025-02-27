@@ -1,0 +1,9 @@
+services:
+  vaultwarden:
+    container_name: vaultwarden
+    image: vaultwarden/server:latest
+    ports:
+      - "10200:80"
+    volumes:
+      - /mnt/hdd/vaultwarden:/data
+    restart: unless-stopped
