@@ -4,15 +4,16 @@ services:
     image: caddy:latest
     restart: unless-stopped
     ports:
-      - "80:80"
-      - "443:443"
-      - "443:443/udp"
+      - 80:80
+      - 443:443
+      - 443:443/udp
     volumes:
       - /mnt/hdd/caddy/caddyfile:/etc/caddy
       - /mnt/hdd/caddy/site:/srv
       - caddy_data:/data
       - caddy_config:/config
-
+      - /etc/localtime:/etc/localtime:ro
 volumes:
-  caddy_data:
-  caddy_config:
+  caddy_data: null
+  caddy_config: null
+networks: {}
