@@ -3,9 +3,10 @@ services:
     volumes:
       - ollama:/root/.ollama
     ports:
-      - 11434:11434
+      - 10600:11434
     container_name: ollama
     image: ollama/ollama
+    restart: unless-stopped
 volumes:
   ollama: {}
 networks: {}
