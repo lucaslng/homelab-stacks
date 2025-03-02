@@ -1,5 +1,5 @@
 services:
-  node:
+  pimonitor:
     container_name: pimonitor
     build: https://github.com/lucaslng/pimonitor.git:.
     ports:
