@@ -1,7 +1,7 @@
 services:
   pimonitor:
     container_name: pimonitor
-    build: https://github.com/lucaslng/pimonitor.git:.
+    build: https://github.com/lucaslng/pimonitor.git
     ports:
       - 3000:3000
     restart: unless-stopped
